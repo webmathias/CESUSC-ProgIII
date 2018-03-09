@@ -14,7 +14,7 @@ server.get('/', (req, res) => {
 
 
 
-const user = require('./user');
+const user = require('./apiExemplo/user');
 
 server.use('/user', user);
 
