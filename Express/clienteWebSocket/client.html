@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //192.168.73.156
+    var exampleSocket = new WebSocket("ws://localhost:3000/echo", "protocolOne");
+//    var exampleSocket = new WebSocket("ws://192.168.70.81:3000/echo", "protocolOne");
+//    var exampleSocket = new WebSocket("ws://192.168.73.151:3000/echo", "protocolOne");
+//    var exampleSocket = new WebSocket("ws://192.168.71.218:3000/echo", "protocolOne");
+    console.log(exampleSocket);
+    exampleSocket.onopen = ()=>{
+        exampleSocket.send("Olá");
+    };
+    exampleSocket.onmessage = (msg)=>{
+        console.log(msg);
+        document.querySelector('#mural').value = msg.data;
+    };
+    function envia(e) {
+        var msg = document.querySelector('#msg').value
+        console.log('enviar', msg);
+        exampleSocket.send(msg);
+    }
+</script>
+<input id="msg"/>
+<button onclick="envia()">enviar</button>
+<textarea id="mural"></textarea>
+</body>
+</html>
