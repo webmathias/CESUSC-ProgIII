@@ -1,0 +1,13 @@
+{
+  "name": "trabalho-N1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha N1.js"
+  },
+  "dependencies": {
+    "mocha": "^5.0.5",
+    "request": "^2.85.0"
+  }
+}

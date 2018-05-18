@@ -1,0 +1,33 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add apidocjs
+
+PATH: 
+  /home/mathias/.npm-global/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/mathias/Android/Sdk//tools:/home/mathias/Android/Sdk//platform-tools
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.7.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find package "apidocjs" on the "npm" registry.
+      at new MessageError (/usr/lib/node_modules/yarn/lib/cli.js:186:110)
+      at NpmResolver.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:51625:15)
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:109:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:118:7)

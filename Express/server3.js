@@ -9,8 +9,8 @@ const mongo_user = "";
 const mongo_pass = "";
 const mongo_port = 27017;
 const mongo_database_name = "local";
-const mongo_url = "mongodb://" + (mongo_user ? (mongo_user + ":" + mongo_pass + "@") : "") + mongo_host + ":" + mongo_port + "/" + mongo_database_name;
-
+// const mongo_url = "mongodb://" + (mongo_user ? (mongo_user + ":" + mongo_pass + "@") : "") + mongo_host + ":" + mongo_port + "/" + mongo_database_name;
+const mongo_url = "mongodb://webmathias:webmathias@ds062097.mlab.com:62097/webmathias"
 
 let server = express();
 /*
@@ -55,6 +55,7 @@ server.use('/user', require('./api/user'));
 
 server.listen(3001, '0.0.0.0', () => {
     console.log("Server started: ", new Date());
+    console.log("tring connect on mongo: ", mongo_url);
     Mongoose.connect(mongo_url, {}, (err, db) => {
         if (err) {
             console.log("Couldn't connect to mongo. Error: " + mongo_url);
